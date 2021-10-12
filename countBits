@@ -1,0 +1,25 @@
+/* JAVA program to count number of Bits set to 1 in an integer-Elements of programming in java*/
+import java.io.*;
+import java.util.Scanner;
+
+public class countSetBits {
+public static short countSetBits(int x)
+	{
+		short numBits = 0;
+		while (x!= 0) {
+			numBits += x & 1;
+			x >>= 1;
+		}
+		return numBits;
+	}
+
+	// driver program
+	public static void main(String args[])
+	{
+		int a;
+	    Scanner obj=new Scanner(System.in);
+	     a = obj.nextInt();
+		System.out.println(countSetBits(a));
+	}
+}
+
